@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعلم الشطرنج - دليل تفاعلي شامل</title>
+    <meta name="description" content="موقع تعليمي تفاعلي لتعلم أساسيات الشطرنج باللغة العربية مع رقعة تفاعلية">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">
+                    <i class="fas fa-chess"></i>
+                    تعلم الشطرنج
+                </h1>
+                <p class="tagline">دليلك التفاعلي لإتقان لعبة الملوك</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">اكتشف عالم الشطرنج الرائع</h2>
+                    <p class="hero-description">
+                        تعلم أساسيات لعبة الشطرنج خطوة بخطوة مع رقعة تفاعلية تساعدك على فهم حركات كل قطعة
+                    </p>
+                    <button class="cta-button" onclick="scrollToSection('basics')">
+                        ابدأ التعلم الآن
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Basics Section -->
+        <section id="basics" class="section basics-section">
+            <div class="container">
+                <h2 class="section-title">أساسيات الشطرنج</h2>
+                
+                <div class="basics-grid">
+                    <div class="basic-card">
+                        <div class="card-icon">
+                            <i class="fas fa-chessboard"></i>
+                        </div>
+                        <h3>الرقعة</h3>
+                        <p>رقعة الشطرنج تتكون من 64 مربعاً (8×8) بألوان متناوبة فاتحة وداكنة. كل لاعب يبدأ من جهة واحدة من الرقعة.</p>
+                    </div>
+                    
+                    <div class="basic-card">
+                        <div class="card-icon">
+                            <i class="fas fa-chess-king"></i>
+                        </div>
+                        <h3>القطع</h3>
+                        <p>كل لاعب يملك 16 قطعة: ملك واحد، وزير واحد، فيلان، حصانان، طابيتان، و8 جنود.</p>
+                    </div>
+                    
+                    <div class="basic-card">
+                        <div class="card-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>الهدف</h3>
+                        <p>الهدف من اللعبة هو وضع ملك الخصم في وضعية "كش مات" حيث لا يستطيع الهروب من التهديد.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pieces Section -->
+        <section id="pieces" class="section pieces-section">
+            <div class="container">
+                <h2 class="section-title">قطع الشطرنج وحركاتها</h2>
+                <p class="section-description">انقر على أي قطعة لمشاهدة حركاتها على الرقعة التفاعلية</p>
+                
+                <div class="pieces-grid">
+                    <div class="piece-card" onclick="showPieceMoves('king')">
+                        <div class="piece-icon">♔</div>
+                        <h3>الملك</h3>
+                        <p>يتحرك مربعاً واحداً في أي اتجاه</p>
+                        <div class="piece-value">قيمة: لا تُقدر بثمن</div>
+                    </div>
+                    
+                    <div class="piece-card" onclick="showPieceMoves('queen')">
+                        <div class="piece-icon">♕</div>
+                        <h3>الوزير</h3>
+                        <p>يتحرك في أي اتجاه لأي مسافة</p>
+                        <div class="piece-value">قيمة: 9 نقاط</div>
+                    </div>
+                    
+                    <div class="piece-card" onclick="showPieceMoves('rook')">
+                        <div class="piece-icon">♖</div>
+                        <h3>الطابية</h3>
+                        <p>يتحرك أفقياً وعمودياً لأي مسافة</p>
+                        <div class="piece-value">قيمة: 5 نقاط</div>
+                    </div>
+                    
+                    <div class="piece-card" onclick="showPieceMoves('bishop')">
+                        <div class="piece-icon">♗</div>
+                        <h3>الفيل</h3>
+                        <p>يتحرك قطرياً لأي مسافة</p>
+                        <div class="piece-value">قيمة: 3 نقاط</div>
+                    </div>
+                    
+                    <div class="piece-card" onclick="showPieceMoves('knight')">
+                        <div class="piece-icon">♘</div>
+                        <h3>الحصان</h3>
+                        <p>يتحرك على شكل حرف L</p>
+                        <div class="piece-value">قيمة: 3 نقاط</div>
+                    </div>
+                    
+                    <div class="piece-card" onclick="showPieceMoves('pawn')">
+                        <div class="piece-icon">♙</div>
+                        <h3>الجندي</h3>
+                        <p>يتحرك للأمام مربعاً واحداً</p>
+                        <div class="piece-value">قيمة: 1 نقطة</div>
+                    </div>
+                    
+                    <div class="piece-card special-move" onclick="showSpecialMove('castling')">
+                        <div class="piece-icon special-icon">♔♖</div>
+                        <h3>التبييت</h3>
+                        <p>حركة خاصة للملك والطابية معاً</p>
+                        <div class="piece-value special-value">حركة خاصة</div>
+                    </div>
+                    
+                    <div class="piece-card special-move" onclick="showSpecialMove('promotion')">
+                        <div class="piece-icon special-icon">♙➜♕</div>
+                        <h3>الترقية</h3>
+                        <p>تحويل الجندي إلى قطعة أخرى</p>
+                        <div class="piece-value special-value">حركة خاصة</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Board Section -->
+        <section id="board" class="section board-section">
+            <div class="container">
+                <h2 class="section-title">الرقعة التفاعلية</h2>
+                <p class="section-description">انقر على القطع لمشاهدة حركاتها المسموحة</p>
+                
+                <div class="board-container">
+                    <div class="chess-board" id="chessBoard">
+                        <!-- سيتم إنشاء الرقعة بواسطة JavaScript -->
+                    </div>
+                    
+                    <div class="board-controls">
+                        <button class="control-btn" onclick="resetBoard()">
+                            <i class="fas fa-redo"></i>
+                            إعادة تعيين
+                        </button>
+                        <button class="control-btn" onclick="clearHighlights()">
+                            <i class="fas fa-eraser"></i>
+                            مسح التمييزات
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="piece-info" id="pieceInfo">
+                    <h3>معلومات القطعة</h3>
+                    <p>انقر على أي قطعة لمشاهدة تفاصيلها وحركاتها المسموحة</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules Section -->
+        <section id="rules" class="section rules-section">
+            <div class="container">
+                <h2 class="section-title">القواعد الأساسية</h2>
+                
+                <div class="rules-grid">
+                    <div class="rule-card">
+                        <h3>
+                            <i class="fas fa-play"></i>
+                            بداية اللعبة
+                        </h3>
+                        <p>اللاعب الذي يملك القطع البيضاء يبدأ أولاً، ثم يتناوب اللاعبان في الحركات.</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h3>
+                            <i class="fas fa-hand-pointer"></i>
+                            الحركات
+                        </h3>
+                        <p>كل حركة يجب أن تنقل قطعة واحدة فقط إلى مربع فارغ أو مربع يحتوي على قطعة خصم.</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h3>
+                            <i class="fas fa-shield-alt"></i>
+                            الكش
+                        </h3>
+                        <p>عندما يكون الملك مهدداً، يقال أنه في حالة "كش" ويجب حمايته فوراً.</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h3>
+                            <i class="fas fa-crown"></i>
+                            كش مات
+                        </h3>
+                        <p>عندما يكون الملك مهدداً ولا يمكن حمايته أو تحريكه، تنتهي اللعبة بـ"كش مات".</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h3>
+                            <i class="fas fa-exchange-alt"></i>
+                            التبييت
+                        </h3>
+                        <p>حركة خاصة تسمح للملك والطابية بالتحرك معاً في حركة واحدة تحت شروط معينة.</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h3>
+                            <i class="fas fa-arrow-up"></i>
+                            ترقية الجندي
+                        </h3>
+                        <p>عندما يصل الجندي إلى نهاية الرقعة، يمكن ترقيته إلى أي قطعة عدا الملك.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">استكشف المزيد</h2>
+                <p class="cta-description">اكتشف مشاريع تفاعلية أخرى وتابعنا لمزيد من المحتوى التعليمي</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://ibrahimmustafacv.github.io/" target="_blank" class="cta-btn primary">
+                        <i class="fas fa-folder-open"></i>
+                        للمزيد من المشاريع
+                    </a>
+                    <a href="https://ibrahimmustafacv.github.io/my-social-media-page/" target="_blank" class="cta-btn secondary">
+                        <i class="fas fa-heart"></i>
+                        تابعنا هنا
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 تعلم الشطرنج. جميع الحقوق محفوظة.</p>
+                <p>موقع تعليمي تفاعلي لتعلم أساسيات الشطرنج باللغة العربية</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Local JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
